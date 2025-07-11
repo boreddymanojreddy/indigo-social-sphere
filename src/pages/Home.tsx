@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import PostCard from '@/components/PostCard';
 import CreatePost from '@/components/CreatePost';
+import ProfilePhotoUpload from '@/components/ProfilePhotoUpload';
 import { User, Calendar } from 'lucide-react';
 
 interface Post {
@@ -63,11 +64,7 @@ const Home = () => {
       {/* Profile Header */}
       <div className="bg-white rounded-xl shadow-sm border border-indigo-100 p-6 mb-8">
         <div className="flex items-center space-x-4">
-          <img
-            src={user?.avatar || 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop&crop=face'}
-            alt={user?.name}
-            className="w-20 h-20 rounded-full object-cover border-4 border-indigo-100"
-          />
+          <ProfilePhotoUpload />
           <div className="flex-1">
             <h1 className="text-2xl font-bold text-gray-900">{user?.name}</h1>
             <p className="text-gray-600 flex items-center space-x-1 mt-1">

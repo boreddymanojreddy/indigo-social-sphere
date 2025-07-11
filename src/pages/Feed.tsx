@@ -60,10 +60,10 @@ const Feed = () => {
       <div className="text-center mb-8">
         <div className="flex items-center justify-center space-x-2 mb-4">
           <TrendingUp className="text-indigo-600" size={32} />
-          <h1 className="text-3xl font-bold text-gray-900">Social Feed</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Monsters Hub</h1>
         </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Discover what everyone is sharing. Join the conversation and connect with our community.
+          Discover what all the monsters are sharing. Join the conversation and connect with our monster community.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ const Feed = () => {
               <Users size={40} className="text-indigo-500" />
             </div>
             <h3 className="text-lg font-medium text-gray-900 mb-2">No posts yet</h3>
-            <p className="text-gray-600 mb-4">Be the first to share something amazing!</p>
+            <p className="text-gray-600 mb-4">Be the first monster to share something amazing!</p>
           </div>
         ) : (
           posts.map((post) => (

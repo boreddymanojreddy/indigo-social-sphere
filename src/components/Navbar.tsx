@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Home, Users, LogOut, User } from 'lucide-react';
+import MonsterLogo from './MonsterLogo';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -15,8 +16,9 @@ const Navbar = () => {
       <nav className="bg-white/80 backdrop-blur-md border-b border-indigo-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/feed" className="text-2xl font-bold text-indigo-600">
-              SocialApp
+            <Link to="/feed" className="flex items-center space-x-3">
+              <MonsterLogo />
+              <span className="text-2xl font-bold text-indigo-600">Monsters11</span>
             </Link>
             <div className="flex space-x-4">
               <Link
@@ -44,8 +46,9 @@ const Navbar = () => {
     <nav className="bg-white/80 backdrop-blur-md border-b border-indigo-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/feed" className="text-2xl font-bold text-indigo-600">
-            SocialApp
+          <Link to="/feed" className="flex items-center space-x-3">
+            <MonsterLogo />
+            <span className="text-2xl font-bold text-indigo-600">Monsters11</span>
           </Link>
           
           <div className="flex items-center space-x-6">
@@ -58,7 +61,7 @@ const Navbar = () => {
               }`}
             >
               <Users size={18} />
-              <span>Feed</span>
+              <span>Monsters Hub</span>
             </Link>
             
             <Link
