@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           {/* Graffiti Style Monsters11 */}
@@ -48,15 +48,15 @@ const Login = () => {
               <span className="absolute inset-0 text-cyan-400 transform -translate-x-1 -translate-y-1 opacity-80">
                 MONSTERS11
               </span>
-              <span className="relative text-white drop-shadow-2xl">
+              <span className="relative text-gray-900 drop-shadow-2xl">
                 MONSTERS11
               </span>
             </h1>
             <div className="h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 rounded-full mx-auto w-32"></div>
           </div>
           
-          <h2 className="mt-6 text-3xl font-bold text-white">Welcome Back</h2>
-          <p className="mt-2 text-sm text-gray-300">
+          <h2 className="mt-6 text-3xl font-bold text-gray-900">Welcome Back</h2>
+          <p className="mt-2 text-sm text-gray-600">
             Sign in to your account to continue
           </p>
         </div>
@@ -64,7 +64,7 @@ const Login = () => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email Address
               </label>
               <div className="relative">
@@ -76,7 +76,7 @@ const Login = () => {
                   name="email"
                   type="email"
                   required
-                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-600 placeholder-gray-400 text-white bg-gray-800/50 backdrop-blur-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleChange}
@@ -85,7 +85,7 @@ const Login = () => {
             </div>
             
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-200 mb-1">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
               <div className="relative">
@@ -97,7 +97,7 @@ const Login = () => {
                   name="password"
                   type={showPassword ? 'text' : 'password'}
                   required
-                  className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-600 placeholder-gray-400 text-white bg-gray-800/50 backdrop-blur-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleChange}
@@ -108,9 +108,9 @@ const Login = () => {
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
-                    <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-200" />
+                    <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />
                   ) : (
-                    <Eye className="h-5 w-5 text-gray-400 hover:text-gray-200" />
+                    <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />
                   )}
                 </button>
               </div>
@@ -118,7 +118,7 @@ const Login = () => {
           </div>
 
           {error && (
-            <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded-lg text-sm backdrop-blur-sm">
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
               {error}
             </div>
           )}
@@ -127,7 +127,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-purple-500/25"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
             >
               {loading ? (
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -138,9 +138,9 @@ const Login = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-gray-600">
               Don't have an account?{' '}
-              <Link to="/register" className="font-medium text-purple-400 hover:text-purple-300 transition-colors">
+              <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
                 Create one here
               </Link>
             </p>
